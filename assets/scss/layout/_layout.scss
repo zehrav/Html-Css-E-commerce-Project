@@ -1,0 +1,25 @@
+.container{
+    max-width: 1200px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+@media screen and (min-width: 1200px) {
+    .container{
+    
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    top:0;
+    left: 0;
+    z-index: $z-fixed; //üst katmanda kalsın diye
+    background-color: $body-color;
+    box-shadow: 0 1px 4px #ddd;
+
+}

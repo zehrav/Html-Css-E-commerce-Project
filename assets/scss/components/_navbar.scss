@@ -1,0 +1,100 @@
+.show{
+    top:$header-height;
+}
+.nav{
+    height: $header-height; //3rem
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 5px;
+
+&__logo{
+color: $first-color;
+font-weight: $font-bold;
+}
+
+&__menu{
+    @media screen and (max-width: 768px) {
+        position: fixed;
+        top: -100%;// $header-height;
+        left: 0;
+        background-color: $white-color;
+        width: 100%;
+        max-height: 400px; //çok uzun bir menu gelirse scroll için
+        padding: 2rem 1rem;
+        z-index: $z-fixed;
+        transition: all 300ms;
+        box-shadow: 0 1px 4px #ddd;
+        border-bottom-left-radius: 18px;
+        border-bottom-right-radius: 18px;
+        text-align: center;
+
+        }
+    
+    }
+&__item {
+    &:not(:last-of-type){ //en sondakine uygulamaz
+    margin-bottom: 1.5rem;
+    }
+}
+
+&__link {
+    color: $first-color;
+    
+    &:hover {
+        color: red;
+        }
+    }
+
+&__action {
+    display: flex;
+    align-items: center;
+    }
+
+&__toggle {
+    display: inline; //mobilde inline olmalı büyük ekranda değişecek
+    cursor: pointer;
+    margin-right: 1rem;
+
+    & i {
+        font-size: 25px;
+    }
+}
+
+&__btn{
+    background-color: $first-color;
+    color: $white-color;
+    padding: 0.375px 1rem;
+    border-radius: 2rem;
+  
+}
+
+}
+
+.subNav{
+
+    &__list{
+display: flex;
+align-items: flex-start;
+justify-content: space-around;
+    }
+
+    &__item{
+        text-align: center;
+        cursor: pointer;
+
+        &img{
+            @media screen and (max-width: 768px) {
+                width: 50px;
+            }
+        }
+        &:hover span{
+            color: $second-color;
+        }
+    }
+   &__text{
+       font-size: 12px;
+       display: block;
+       margin: 0;
+   }
+}
